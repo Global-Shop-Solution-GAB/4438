@@ -1,0 +1,1889 @@
+Program.Sub.ScreenSU.Start
+Gui.F_KITE..Create
+Gui.F_KITE..Caption("Kemudahan Impor Tujuan Ekspor (KITE)")
+Gui.F_KITE..Size(17520,9915)
+Gui.F_KITE..MinX(0)
+Gui.F_KITE..MinY(0)
+Gui.F_KITE..Position(0,0)
+Gui.F_KITE..BackColor(-2147483633)
+Gui.F_KITE..MousePointer(0)
+Gui.F_KITE..Event(UnLoad,CloseScreen)
+Gui.F_KITE.tab1.Create(Tab)
+Gui.F_KITE.tab1.Size(17085,8730)
+Gui.F_KITE.tab1.Position(90,510)
+Gui.F_KITE.tab1.FontSize(9)
+Gui.F_KITE.tab1.Tabs(8)
+Gui.F_KITE.tab1.SetTab(0)
+Gui.F_KITE.tab1.Caption("RM Receipt")
+Gui.F_KITE.tab1.SetTab(1)
+Gui.F_KITE.tab1.Caption("RM to WIP")
+Gui.F_KITE.tab1.SetTab(2)
+Gui.F_KITE.tab1.Caption("Outside Process")
+Gui.F_KITE.tab1.SetTab(3)
+Gui.F_KITE.tab1.Caption("Production Summary")
+Gui.F_KITE.tab1.SetTab(4)
+Gui.F_KITE.tab1.Caption("Shipment")
+Gui.F_KITE.tab1.SetTab(5)
+Gui.F_KITE.tab1.Caption("RM Stock Summary")
+Gui.F_KITE.tab1.SetTab(6)
+Gui.F_KITE.tab1.Caption("FG Stock Summary")
+Gui.F_KITE.tab1.SetTab(7)
+Gui.F_KITE.tab1.Caption("Scrap/ Waste")
+Gui.F_KITE.GsGC1.Create(GsGridControl)
+Gui.F_KITE.GsGC1.Size(16830,8100)
+Gui.F_KITE.GsGC1.Position(75,135)
+Gui.F_KITE.GsGC1.Parent("tab1",0)
+Gui.F_KITE.GsGC2.Create(GsGridControl)
+Gui.F_KITE.GsGC2.Size(16830,8100)
+Gui.F_KITE.GsGC2.Position(75,135)
+Gui.F_KITE.GsGC2.Parent("tab1",1)
+Gui.F_KITE.GsGC3.Create(GsGridControl)
+Gui.F_KITE.GsGC3.Size(16830,8100)
+Gui.F_KITE.GsGC3.Position(75,135)
+Gui.F_KITE.GsGC3.Parent("tab1",2)
+Gui.F_KITE.GsGC4.Create(GsGridControl)
+Gui.F_KITE.GsGC4.Size(16830,8100)
+Gui.F_KITE.GsGC4.Position(75,135)
+Gui.F_KITE.GsGC4.Parent("tab1",3)
+Gui.F_KITE.GsGC5.Create(GsGridControl)
+Gui.F_KITE.GsGC5.Size(16830,8100)
+Gui.F_KITE.GsGC5.Position(75,135)
+Gui.F_KITE.GsGC5.Parent("tab1",4)
+Gui.F_KITE.GsGC6.Create(GsGridControl)
+Gui.F_KITE.GsGC6.Size(16830,8100)
+Gui.F_KITE.GsGC6.Position(75,135)
+Gui.F_KITE.GsGC6.Parent("tab1",5)
+Gui.F_KITE.GsGC7.Create(GsGridControl)
+Gui.F_KITE.GsGC7.Size(16830,8100)
+Gui.F_KITE.GsGC7.Position(75,135)
+Gui.F_KITE.GsGC7.Parent("tab1",6)
+Gui.F_KITE.GsGC8.Create(GsGridControl)
+Gui.F_KITE.GsGC8.Size(16830,8100)
+Gui.F_KITE.GsGC8.Position(75,135)
+Gui.F_KITE.GsGC8.Parent("tab1",7)
+Gui.F_KITE.cmd1.Create(Button)
+Gui.F_KITE.cmd1.Size(2250,375)
+Gui.F_KITE.cmd1.Position(14895,60)
+Gui.F_KITE.cmd1.Caption("Ekspor Excel")
+Gui.F_KITE.cmd1.FontSize(9)
+Gui.F_KITE.cmd1.Event(Click,ExportExcel)
+Gui.F_KITE.lblPeriod.Create(Label,"Label",True,3405,255,0,135,165,True,0,"Arial",9,-2147483633,0)
+Gui.F_KITE.lblPeriod.FontStyle(True,False,False,False,False)
+Gui.F_KITESelect..Create
+Gui.F_KITESelect..Caption("Kemudahan Impor Tujuan Ekspor (KITE)")
+Gui.F_KITESelect..Size(7725,1845)
+Gui.F_KITESelect..MinX(0)
+Gui.F_KITESelect..MinY(0)
+Gui.F_KITESelect..Position(0,0)
+Gui.F_KITESelect..BackColor(-2147483633)
+Gui.F_KITESelect..MousePointer(0)
+Gui.F_KITESelect..Event(UnLoad,CloseScreen)
+Gui.F_KITESelect.dtp1.Create(DatePicker)
+Gui.F_KITESelect.dtp1.Size(1935,285)
+Gui.F_KITESelect.dtp1.Position(195,705)
+Gui.F_KITESelect.dtp1.Event(Change,SelectionDateCheck)
+Gui.F_KITESelect.dtp2.Create(DatePicker)
+Gui.F_KITESelect.dtp2.Size(1935,285)
+Gui.F_KITESelect.dtp2.Position(2745,705)
+Gui.F_KITESelect.dtp2.Event(Change,SelectionDateCheck)
+Gui.F_KITESelect.lbl1.Create(Label,"Select a date range for raw material receipt",True,4650,255,0,120,165,True,0,"Arial",10,-986896,0)
+Gui.F_KITESelect.lbl1.FontStyle(True,False,False,False,False)
+Gui.F_KITESelect.lbl2.Create(Label,"From",True,1935,255,0,150,465,True,0,"Arial",10,-986896,0)
+Gui.F_KITESelect.lbl3.Create(Label,"Until",True,1935,255,0,2700,465,True,0,"Arial",10,-986896,0)
+Gui.F_KITESelect.cmd1.Create(Button)
+Gui.F_KITESelect.cmd1.Size(2175,600)
+Gui.F_KITESelect.cmd1.Position(5190,405)
+Gui.F_KITESelect.cmd1.Caption("Process")
+Gui.F_KITESelect.cmd1.FontSize(10)
+Gui.F_KITESelect.cmd1.Event(Click,ProcessClick)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.dKITEStart.Declare(Date)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+V.Local.sIconPath.Declare
+F.ODBC.Connection!Conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'F.Intrinsic.Date.ConvertDString("20150701","YYYYMMDD",V.Global.dKITEStart)
+F.Intrinsic.String.Concat(V.Caller.PluginsDir,"\GAB\GAS\gss2.ico",V.Local.sIconPath)
+
+Gui.F_KITE..Icon(V.Local.sIconPath)
+Gui.F_KITESelect..Icon(V.Local.sIconPath)
+
+Gui.F_KITESelect..Show
+Program.Sub.Main.End
+
+Program.Sub.CloseScreen.Start
+F.Intrinsic.Control.If(V.DataTable.dtPartList.Exists,=,True)
+	F.Data.DataTable.Close("dtVendor")
+	F.Data.DataTable.Close("dtCust")
+	F.Data.DataTable.Close("dtPartList")
+	F.Data.DataTable.Close("dtIncomingRM")
+	F.Data.DataTable.Close("dtIssueWIP")
+	F.Data.DataTable.Close("dtSummaryRM")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtJob.Exists,=,True)
+	F.Data.DataTable.Close("dtJob")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtOutsidePO.Exists,=,True)
+	F.Data.DataTable.Close("dtOutsidePO")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtIncomingFG.Exists,=,True)
+	F.Data.DataTable.Close("dtIncomingFG")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtSummaryFG.Exists,=,True)
+	F.Data.DataTable.Close("dtSummaryFG")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtOutgoingFG.Exists,=,True)
+	F.Data.DataTable.Close("dtOutgoingFG")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.CloseScreen.End
+
+Program.Sub.ProcessClick.Start
+V.Local.bExist.Declare
+
+V.Local.dFrom.Declare(Date)
+V.Local.dUntil.Declare(Date)
+
+V.Local.sDate1.Declare
+V.Local.sDate2.Declare
+V.Local.sLabel.Declare
+V.Local.sQuery.Declare
+
+V.Local.dFrom.Set(V.Screen.F_KITESelect!dtp1.Value)
+V.Local.dUntil.Set(V.Screen.F_KITESelect!dtp2.Value)
+F.Intrinsic.String.Format(V.Local.dFrom,"DD-MMM-YY",V.Local.sDate1)
+F.Intrinsic.String.Format(V.Local.dUntil,"DD-MMM-YY",V.Local.sDate2)
+F.Intrinsic.String.Build("Period: {0} until {1}",V.Local.sDate1.Trim,V.Local.sDate2.Trim,V.Local.sLabel)
+Gui.F_KITE.lblPeriod.Caption(V.Local.sLabel)
+
+'Part designated as KITE in user defined 2
+F.Intrinsic.UI.InvokeWaitDialog("Loading part number designated as KITE","Indonesian KITE ")
+F.Data.DataTable.CreateFromSQL("dtPartList","Conx","select i1.part as part, (rtrim(i2.description)+' '+rtrim(i1.description_2)+' '+rtrim(i1.description_3)) as description, i2.um_inventory as um, i2.um_purchasing as um_pur, i2.factor_conversion as conversion from inventory_mst2 i1 left join inventory_mstr i2 on i1.part = i2.part where rtrim(text_info2) = 'KITE'",True)
+'Get supplier data that are not using IDR
+F.Data.DataTable.CreateFromSQL("dtVendor","Conx","select vendor, name_vendor as name, address5 as country from v_vendor_master3 where vendor <> ''",True)
+F.Data.DataTable.CreateFromSQL("dtCust","conx","select c1.customer as 'customer', c1.name_customer as 'name', c2.order_curr as 'currency', c2.address5 as 'country' from v_customer_master c1 left join v_customer_intl c2 on c1.customer = c2.customer",True)
+F.ODBC.Connection!Conx.TableExists("GAB_Customer_Long",V.Local.bExist)
+F.Intrinsic.Control.If(V.Local.bExist,=,True)
+	F.Data.DataTable.CreateFromSQL("dtCustLong","conx","select customer, customerlong as 'name' from GAB_customer_long",True)
+F.Intrinsic.Control.EndIf
+
+'Incoming RM
+F.Intrinsic.UI.ChangeWaitStatus("Loading item master for incoming raw material")
+F.Intrinsic.String.Format(V.Local.dFrom,"YYMMDD",V.Local.sDate1)
+F.Intrinsic.String.Format(V.Local.dUntil,"YYMMDD",V.Local.sDate2)
+F.Intrinsic.String.Build("SELECT PART, DATE_HISTORY, TIME_ITEM_HISTORY, LOT, HEAT, SERIAL_NUMBER, CODE_TRANSACTION, QUANTITY, PURCHASE_ORDER, LEFT(PO_LINE,3) AS PO_LINE, RECEIVER FROM ITEM_HISTORY WHERE DATE_HISTORY BETWEEN '{0}' AND '{1}' AND (CODE_TRANSACTION = 'A10' OR CODE_TRANSACTION = 'P10' OR CODE_TRANSACTION = 'P11')",V.Local.sDate1.Trim,V.Local.sDate2.Trim,V.Local.sQuery)
+F.Data.DataTable.CreateFromSQL("dtItem","Conx",V.Local.sQuery,True)
+F.Intrinsic.Control.CallSub(incomingrm)
+F.Data.DataTable.Close("dtItem")
+F.Data.DataTable.Close("dtPartList")
+Gui.F_KITE.GsGC1.AddGridViewFromDatatable("gvIncomingRM","dtIncomingRM")
+Gui.F_KITE.GsGC1.MainView("gvIncomingRM")
+
+'Issue WIP
+F.Intrinsic.Control.CallSub(wip_issue)
+F.Data.DataView.Create("dtIssueWIP","dvIssueWIP",22,"","Issue_Date ASC, Issue_No ASC")
+Gui.F_KITE.GsGC2.AddGridViewFromDataview("gvIssueWIP","dtIssueWIP","dvIssueWIP")
+Gui.F_KITE.GsGC2.MainView("gvIssueWIP")
+
+'RM summary
+F.Intrinsic.Control.CallSub(summaryrm)
+F.Data.DataView.Create("dtSummaryRM","dvSummaryRM",22,"","Part ASC")
+Gui.F_KITE.GsGC6.AddGridviewFromDataview("gvSummaryRM","dtSummaryRM","dvSummaryRM")
+Gui.F_KITE.GsGC6.MainView("gvSummaryRM")
+
+F.Intrinsic.Control.If(V.DataTable.dtJob.RowCount,>,0)
+	F.Intrinsic.Control.CallSub(quality)
+	F.Data.DataView.Create("dtScrap","dvScrap",22,"","Issue_Date ASC")
+	Gui.F_KITE.GsGC8.AddGridViewFromDataview("gvScrap","dtScrap","dvScrap")
+	Gui.F_KITE.GsGC8.MainView("gvScrap")
+
+	F.Intrinsic.Control.CallSub(outsidepo)
+	F.Data.DataView.Create("dtOutsidePO","dvOutsidePO",22,"","Issue_Date ASC, Issue_No ASC")
+	Gui.F_KITE.GsGC3.AddGridViewFromDataview("gvOutsidePO","dtOutsidePO","dvOutsidePO")
+	Gui.F_KITE.GsGC3.MainView("gvOutsidePO")
+	
+	F.Intrinsic.Control.CallSub(incomingfg)
+	F.Data.DataView.Create("dtIncomingFG","dvIncomingFG",22,"","Issue_Date ASC, Issue_No ASC")
+	Gui.F_KITE.GsGC4.AddGridViewFromDataview("gvIncomingFG","dtIncomingFG","dvIncomingFG")
+	Gui.F_KITE.GsGC4.MainView("gvIncomingFG")
+	
+	F.Intrinsic.Control.CallSub(outgoingfg)
+	F.Data.DataView.Create("dtOutgoingFG","dvOutgoingFG",22,"","Issue_Date ASC, Issue_No ASC")
+	Gui.F_KITE.GsGC5.AddGridviewFromDataview("gvOutgoingFG","dtOutgoingFG","dvOutgoingFG")
+	Gui.F_KITE.GsGC5.MainView("gvOutgoingFG")
+	
+	F.Intrinsic.Control.CallSub(summaryfg)
+	F.Data.DataView.Create("dtSummaryFG","dvSummaryFG",22,"","Part ASC")
+	Gui.F_KITE.GsGC7.AddGridviewFromDataview("gvSummaryFG","dtSummaryFG","dvSummaryFG")
+	Gui.F_KITE.GsGC7.MainView("gvSummaryFG")
+F.Intrinsic.Control.EndIf
+
+'Set grid properties for each gridview
+F.Intrinsic.Control.CallSub(gridproperties)
+F.Intrinsic.UI.CloseWaitDialog
+Gui.F_KITE.tab1.SetTab(0)
+Gui.F_KITE..Show
+Program.Sub.ProcessClick.End
+
+Program.Sub.SelectionDateCheck.Start
+V.Local.dFrom.Declare(Date)
+V.Local.dUntil.Declare(Date)
+
+V.Local.iDiff.Declare
+
+V.Local.dFrom.Set(V.Screen.F_KITESelect!dtp1.Value)
+V.Local.dUntil.Set(V.Screen.F_KITESelect!dtp2.Value)
+
+F.Intrinsic.Date.DateDiff("D",V.Local.dFrom,V.Local.dUntil,V.Local.iDiff)
+F.Intrinsic.Control.If(V.Local.iDiff,<,0)
+	Gui.F_KITESelect.dtp2.Value(V.Local.dFrom)
+F.Intrinsic.Control.EndIf
+Program.Sub.SelectionDateCheck.End
+
+Program.Sub.IncomingRM.Start
+V.Local.bCheck.Declare
+
+V.Local.dDateReceived.Declare(Date)
+
+V.Local.fAmt.Declare
+V.Local.fPurQty.Declare
+V.Local.fUnitCost.Declare
+
+V.Local.i1.Declare
+V.Local.iCRow.Declare
+V.Local.iRow.Declare
+
+V.Local.sBatch.Declare
+V.Local.sDateHist.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sMessage.Declare
+V.Local.sQuery.Declare
+V.Local.sReceiver.Declare
+V.Local.sRet1.Declare
+V.Local.sRet2.Declare
+V.Local.sTimeHist.Declare
+V.Local.sUM.Declare
+
+'Prepare datatable
+F.Data.DataTable.Create("dtIncomingRM",True)
+F.Data.DataTable.AddColumn("dtIncomingRM","Doc_Type","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Doc_No","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Doc_Date","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Item_Serial_No","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Receiving_No","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Receiving_Date","Date")
+F.Data.DataTable.AddColumn("dtIncomingRM","Item_Code","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Item_Description","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","UM_Pur","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Quantity_Pur","Float")
+F.Data.DataTable.AddColumn("dtIncomingRM","UM_Inv","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Quantity_Inv","Float")
+F.Data.DataTable.AddColumn("dtIncomingRM","Curr","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Amount","Float")
+F.Data.DataTable.AddColumn("dtIncomingRM","Warehouse","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","SubContract","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Origin","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Lot","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Heat","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Serial","String")
+F.Data.DataTable.AddColumn("dtIncomingRM","Batch","String")
+
+F.Data.DataTable.Create("dtSummaryRM",True)
+F.Data.DataTable.AddColumn("dtSummaryRM","Part","String")
+F.Data.DataTable.AddColumn("dtSummaryRM","Desc","String")
+F.Data.DataTable.AddColumn("dtSummaryRM","UM","String")
+F.Data.DataTable.AddColumn("dtSummaryRM","Beg_Bal","Float")
+F.Data.DataTable.AddColumn("dtSummaryRM","In","Float")
+F.Data.DataTable.AddColumn("dtSummaryRM","Out","Float")
+F.Data.DataTable.AddColumn("dtSummaryRM","End_Bal","Float")
+F.Data.DataTable.AddColumn("dtSummaryRM","Warehouse","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtItem.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("Incoming Raw Material: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtItem.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtItem.RowCount)
+	'Check if the part is tagged as KITE
+	F.Intrinsic.String.Build("part = '{0}'",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,V.Local.sFilter)
+	F.Data.DataTable.Select("dtPartList",V.Local.sFilter,V.Local.sRet1)
+	F.Intrinsic.Control.If(V.Local.sRet1,<>,"***NORETURN***")
+		F.Intrinsic.Control.If(V.DataTable.dtPartList(V.Local.sRet1).um_pur!FieldValTrim,=,"")
+			V.Local.sUM.Set(V.DataTable.dtPartList(V.Local.sRet1).um!FieldValTrim)
+		F.Intrinsic.Control.Else
+			V.Local.sUM.Set(V.DataTable.dtPartList(V.Local.sRet1).um_pur!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Date.ConvertDString(V.DataTable.dtItem(V.Local.i1).DATE_HISTORY!FieldValTrim,"YYMMDD",V.Local.dDateReceived)
+		F.Data.DataTable.AddRow("dtIncomingRM","Doc_Type","BC2.0","Receiving_Date",V.Local.dDateReceived,"Item_Code",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,"Item_Description",V.DataTable.dtPartList(V.Local.sRet1).description!FieldValTrim,"Warehouse","GBAK","UM_Pur",V.Local.sUM,"Quantity_Inv",V.DataTable.dtItem(V.Local.i1).QUANTITY!FieldValFloat,"UM_Inv",V.DataTable.dtPartList(V.Local.sRet1).um!FieldValTrim,"Lot",V.DataTable.dtItem(V.Local.i1).LOT!FieldValTrim,"Heat",V.DataTable.dtItem(V.Local.i1).HEAT!FieldValTrim,"Serial",V.DataTable.dtItem(V.Local.i1).SERIAL_NUMBER!FieldValTrim)
+		F.Intrinsic.String.Build("SELECT USER_FIELD_1,USER_FIELD_2,USER_FIELD_3,USER_FIELD_7,USER_FIELD_8,USER_FIELD_9 FROM ITEM_MASTER WHERE PART = '{0}' AND LOT = '{1}' AND HEAT = '{2}' AND SERIAL_NUMBER = '{3}'",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,V.DataTable.dtItem(V.Local.i1).LOT!FieldValTrim,V.DataTable.dtItem(V.Local.i1).HEAT!FieldValTrim,V.DataTable.dtItem(V.Local.i1).SERIAL_NUMBER!FieldValTrim,V.Local.sQuery)
+		'Get the custom document information stored in ITEM_MASTER user fields
+		F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+		F.Data.DataTable.SetValue("dtIncomingRM",V.DataTable.dtIncomingRM.RowCount--,"Doc_No",V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_1,"Doc_Date",V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_2)
+		F.ODBC.Conx!rst.Close
+		'Get currency, amount, and country information, only for P10 and P11
+		F.Intrinsic.String.Build("{0}{1}{2}",V.DataTable.dtItem(V.Local.i1).CODE_TRANSACTION!FieldValTrim,V.DataTable.dtItem(V.Local.i1).DATE_HISTORY!FieldValTrim,V.DataTable.dtItem(V.Local.i1).TIME_ITEM_HISTORY!FieldValTrim,V.Local.sReceiver)
+		F.Intrinsic.Control.If(V.DataTable.dtItem(V.Local.i1).CODE_TRANSACTION!FieldValTrim,<>,"A10")
+			'P10 and P11
+			F.Intrinsic.String.Build("select qty_received as qty, vendor, exchange_currency as currency, exch_ext_cost from po_receiver where receiver_no = '{0}' and purchase_order = '{1}' and po_line = '{2}'",V.DataTable.dtItem(V.Local.i1).RECEIVER!FieldValTrim,V.DataTable.dtItem(V.Local.i1).PURCHASE_ORDER!FieldValTrim,V.DataTable.dtItem(V.Local.i1).PO_LINE!FieldValTrim,V.Local.sQuery)
+			F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+				'Amount
+				F.Intrinsic.Math.Div(V.ODBC.Conx!rst.FieldValFloat!exch_ext_cost,V.ODBC.Conx!rst.FieldValFloat!qty,V.Local.fUnitCost)
+				F.Intrinsic.Math.Mult(V.DataTable.dtItem(V.Local.i1).QUANTITY!FieldValFloat,V.Local.fUnitCost,V.Local.fAmt)
+				F.Intrinsic.Math.Round(V.Local.fAmt,2,V.Local.fAmt)
+				'Country
+				F.Intrinsic.String.Build("vendor = '{0}'",V.ODBC.Conx!rst.FieldValTrim!vendor,V.Local.sFilter)
+				F.Data.DataTable.Select("dtVendor",V.Local.sFilter,V.Local.sRet2)
+				F.Data.DataTable.SetValue("dtIncomingRM",V.DataTable.dtIncomingRM.RowCount--,"Quantity_Pur",V.ODBC.Conx!rst.FieldValFloat!qty,"Curr",V.ODBC.Conx!rst.FieldValTrim!currency,"Amount",V.Local.fAmt,"Origin",V.DataTable.dtVendor(V.Local.sRet2).country!FieldValTrim,"Receiving_No",V.DataTable.dtItem(V.Local.i1).RECEIVER!FieldValTrim,"Item_Serial_No",V.DataTable.dtItem(V.Local.i1).SERIAL_NUMBER!FieldValTrim,"Batch",V.Local.sReceiver.Trim)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Conx!rst.Close
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.If(V.DataTable.dtPartList(V.Local.sRet1).um_pur!FieldValTrim,=,"")
+				F.Intrinsic.Control.If(V.DataTable.dtPartList(V.Local.sRet1).conversion!FieldValFloat,=,0)
+					V.Local.fPurQty.Set(V.DataTable.dtItem(V.Local.i1).QUANTITY!FieldValFloat)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.Math.Div(V.DataTable.dtItem(V.Local.i1).QUANTITY!FieldValFloat,V.DataTable.dtPartList(V.Local.sRet1).conversion!FieldValFloat,V.Local.fPurQty)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Else
+				V.Local.fPurQty.Set(V.DataTable.dtItem(V.Local.i1).QUANTITY!FieldValFloat)
+			F.Intrinsic.Control.EndIf
+			'A10 transaction only
+			F.Intrinsic.String.Build("SELECT USER_FIELD_4,USER_FIELD_7,USER_FIELD_8,USER_FIELD_9 FROM ITEM_MASTER WHERE PART = '{0}' AND LOT = '{1}' AND HEAT = '{2}' AND SERIAL_NUMBER = '{3}'",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,V.DataTable.dtItem(V.Local.i1).LOT!FieldValTrim,V.DataTable.dtItem(V.Local.i1).HEAT!FieldValTrim,V.DataTable.dtItem(V.Local.i1).SERIAL_NUMBER!FieldValTrim,V.Local.sQuery)
+			F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Math.IsNumeric(V.ODBC.Conx!rst.FieldVal!USER_FIELD_8,V.Local.bCheck)
+			F.Intrinsic.Control.If(V.Local.bCheck,=,True)
+				F.Intrinsic.Math.ConvertToFloat(V.ODBC.Conx!rst.FieldVal!USER_FIELD_8,V.Local.fAmt)
+			F.Intrinsic.Control.Else
+				V.Local.fAmt.Set(0)
+			F.Intrinsic.Control.EndIf
+			F.Data.DataTable.SetValue("dtIncomingRM",V.DataTable.dtIncomingRM.RowCount--,"Receiving_No",V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_4,"Quantity_Pur",V.Local.fPurQty,"Curr",V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_7,"Amount",V.Local.fAmt,"Origin",V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_9,"Batch",V.Local.sReceiver.Trim)
+			F.ODBC.Conx!rst.Close
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.DataTable.dtSummaryRM.RowCount,>,0)
+			F.Intrinsic.String.Build("Part = '{0}'",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,V.Local.sFilter)
+			F.Data.DataTable.Select("dtSummaryRM",V.Local.sFilter,V.Local.sRet2)
+			F.Intrinsic.Control.If(V.Local.sRet2,=,"***NORETURN***")
+				F.Data.DataTable.AddRow("dtSummaryRM","Part",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,"Desc",V.DataTable.dtPartList(V.Local.sRet1).description!FieldValTrim,"UM",V.DataTable.dtPartList(V.Local.sRet1).um!FieldValTrim)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.AddRow("dtSummaryRM","Part",V.DataTable.dtItem(V.Local.i1).PART!FieldValTrim,"Desc",V.DataTable.dtPartList(V.Local.sRet1).description!FieldValTrim,"UM",V.DataTable.dtPartList(V.Local.sRet1).um!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.IncomingRM.End
+
+Program.Sub.GridProperties.Start
+'Incoming RM
+Gui.F_KITE.GsGC1.SetGridViewProperty("gvIncomingRM","AllowSort",True)
+Gui.F_KITE.GsGC1.SetGridViewProperty("gvIncomingRM","AllowFilter",True)
+Gui.F_KITE.GsGC1.SetGridViewProperty("gvIncomingRM","OptionBehaviorEditable",True)
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Lot","Visible",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Heat","Visible",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Serial","Visible",False)
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Type","Caption","Doc. Type")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_No","Caption","Doc. No")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Date","Caption","Doc. Date")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Serial_No","Caption","Part Serial No.")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_No","Caption","Receiver No.")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_Date","Caption","Receiver Date")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Code","Caption","Part Number")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Description","Caption","Part Description")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Pur","Caption","UM (PO)")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","Caption","Qty (PO)")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Inv","Caption","UM (Inv)")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Inv","Caption","Qty (Inv)")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Amount","Caption","Total Cost")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Warehouse","Caption","Warehouse")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","SubContract","Caption","Subcontract Recipient")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","Caption","Country of Origin")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Type","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_No","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Date","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Serial_No","MinWidth","250")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_No","MinWidth","140")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_Date","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Code","MinWidth","150")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Description","MinWidth","400")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Pur","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","MinWidth","120")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Inv","MinWidth","80")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Inv","MinWidth","120")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Curr","MinWidth","40")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Amount","MinWidth","120")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Warehouse","MinWidth","60")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","SubContract","MinWidth","110")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","MinWidth","200")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Batch","MinWidth","150")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Type","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_No","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Date","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Serial_No","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_No","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_Date","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Code","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Description","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Pur","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Inv","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Inv","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Curr","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("GvIncomingRM","Amount","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Warehouse","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","SubContract","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Batch","HeaderHAlignment","Center")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Date","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_Date","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Pur","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","UM_Inv","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Curr","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Warehouse","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Batch","CELLHALIGNMENT","Center")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Receiving_Date","DisplayCustomDatetime","d")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","DisplayCustomNumeric","###,###,###,##0.00")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Inv","DisplayCustomNumeric","###,###,###,##0.00")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Amount","DisplayCustomNumeric","###,###,###,##0.00")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Serial_No","AllowEdit",True)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","AllowEdit",True)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Curr","AllowEdit",True)
+Gui.F_KITE.GsGC1.SetColumnProperty("GvIncomingRM","Amount","AllowEdit",True)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","AllowEdit",True)
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Item_Serial_No","ReadOnly",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Quantity_Pur","ReadOnly",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Curr","ReadOnly",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("GvIncomingRM","Amount","ReadOnly",False)
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","ReadOnly",False)
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Type","Fixed","Left")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_No","Fixed","Left")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Doc_Date","Fixed","Left")
+Gui.F_KITE.GsGC1.SetColumnProperty("GvIncomingRM","Item_Serial_No","Fixed","Left")
+
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","MaxWidth","300")
+Gui.F_KITE.GsGC1.SetColumnProperty("gvIncomingRM","Origin","FixedWidth",False)
+
+'Issue WIP
+Gui.F_KITE.GsGC2.SetGridViewProperty("gvIssueWIP","AllowSort",True)
+Gui.F_KITE.GsGC2.SetGridViewProperty("gvIssueWIP","AllowFilter",True)
+
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_No","Caption","Issue No.")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_Date","Caption","Issue Date")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Code","Caption","Part Number")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Description","Caption","Part Description")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","UM","Caption","UM")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Quantity","Caption","Quantity")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Job","Caption","Work Order")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract","Caption","Subcontractor")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract_Receiver","Caption","Subcontract Recipient")
+
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_No","MinWidth","150")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_Date","MinWidth","80")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Code","MinWidth","150")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Description","MinWidth","400")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","UM","MinWidth","30")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Quantity","MinWidth","120")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Job","MinWidth","120")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Batch","MinWidth","150")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract","MinWidth","80")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract_Receiver","MinWidth","110")
+
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_No","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_Date","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Code","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Item_Description","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","UM","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Quantity","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Job","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Batch","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","SubContract_Receiver","HeaderHAlignment","Center")
+
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_Date","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","UM","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Job","CELLHALIGNMENT","Center")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Batch","CELLHALIGNMENT","Center")
+
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Issue_Date","DisplayCustomDatetime","d")
+Gui.F_KITE.GsGC2.SetColumnProperty("gvIssueWIP","Quantity","DisplayCustomNumeric","###,###,###,##0.00")
+
+F.Intrinsic.Control.If(V.DataTable.dtJob.RowCount,>,0)
+	'Issue WIP
+	Gui.F_KITE.GsGC3.SetGridViewProperty("gvOutsidePO","AllowSort",True)
+	Gui.F_KITE.GsGC3.SetGridViewProperty("gvOutsidePO","AllowFilter",True)
+	
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_No","Caption","Issue No.")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_Date","Caption","Issue Date")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Code","Caption","Part Number")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Description","Caption","Part Description")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","UM","Caption","UM")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Quantity","Caption","Quantity")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","SubContract_Receiver","Caption","Subcontract Recipient")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Job","Caption","Work Order")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Seq","Caption","Operation")
+	
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_No","MinWidth","150")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_Date","MinWidth","80")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Code","MinWidth","150")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Description","MinWidth","400")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","UM","MinWidth","30")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Quantity","MinWidth","120")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","SubContract_Receiver","MinWidth","200")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Job","MinWidth","120")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Seq","MinWidth","60")
+	
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_No","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_Date","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Code","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Item_Description","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","UM","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Quantity","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","SubContract_Receiver","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Job","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Seq","HeaderHAlignment","Center")
+	
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_Date","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","UM","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Job","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Seq","CELLHALIGNMENT","Center")
+	
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Issue_Date","DisplayCustomDatetime","d")
+	Gui.F_KITE.GsGC3.SetColumnProperty("gvOutsidePO","Quantity","DisplayCustomNumeric","###,###,###,##0.00")
+
+	'Incoming FG
+	Gui.F_KITE.GsGC4.SetGridViewProperty("gvIncomingFG","AllowSort",True)
+	Gui.F_KITE.GsGC4.SetGridViewProperty("gvIncomingFG","AllowFilter",True)
+	
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_No","Caption","Issue No.")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_Date","Caption","Issue Date")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Code","Caption","Part Number")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Description","Caption","Part Description")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","UM","Caption","UM")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","WIP2FG","Caption","WIP to FG")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","SubContract","Caption","From Subcontractor")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Warehouse","Caption","Warehouse")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Job","Caption","Work Order")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Seq","Caption","Operation")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Lot","Caption","Lot")
+	
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_No","MinWidth","150")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_Date","MinWidth","80")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Code","MinWidth","150")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Description","MinWidth","400")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","UM","MinWidth","30")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","WIP2FG","MinWidth","120")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","SubContract","MinWidth","120")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Warehouse","MinWidth","80")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Job","MinWidth","120")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Seq","MinWidth","80")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Lot","MinWidth","120")
+	
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_No","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_Date","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Code","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Item_Description","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","UM","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","WIP2FG","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","SubContract","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Warehouse","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Job","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Seq","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Lot","HeaderHAlignment","Center")
+	
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_Date","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","UM","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Warehouse","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Job","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Seq","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Lot","CELLHALIGNMENT","Center")
+	
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","Issue_Date","DisplayCustomDatetime","d")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","WIP2FG","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC4.SetColumnProperty("gvIncomingFG","SubContract","DisplayCustomNumeric","###,###,###,##0.00")
+	
+	'Shipping
+	Gui.F_KITE.GsGC5.SetGridViewProperty("gvOutgoingFG","AllowSort",True)
+	Gui.F_KITE.GsGC5.SetGridViewProperty("gvOutgoingFG","AllowFilter",True)
+	Gui.F_KITE.GsGC5.SetGridViewProperty("gvOutgoingFG","OptionBehaviorEditable",True)
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_No","Caption","Doc. No.")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","Caption","Doc. Date")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_No","Caption","Issue No.")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_Date","Caption","Issue Date")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Customer","Caption","Customer")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Country","Caption","Country")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Code","Caption","Part Number")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Description","Caption","Part Description")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","UM","Caption","UM")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Quantity","Caption","Quantity")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","Caption","Amount")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Job","Caption","Work Order")
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_No","MinWidth","100")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","MinWidth","80")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_No","MinWidth","150")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_Date","MinWidth","80")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Customer","MinWidth","300")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Country","MinWidth","120")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Code","MinWidth","150")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Description","MinWidth","400")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","UM","MinWidth","30")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Quantity","MinWidth","120")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Curr","MinWidth","40")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","MinWidth","120")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Job","MinWidth","120")
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_No","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_No","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_Date","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Customer","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Country","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Code","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Item_Description","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","UM","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Quantity","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Curr","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Job","HeaderHAlignment","Center")
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_Date","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Country","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","UM","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Curr","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Job","CELLHALIGNMENT","Center")
+	
+'	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","DisplayCustomDatetime","d")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Issue_Date","DisplayCustomDatetime","d")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Quantity","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","DisplayCustomNumeric","###,###,###,##0.00")
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_No","AllowEdit",True)
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","AllowEdit",True)
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","AllowEdit",True)
+	
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_No","ReadOnly",False)
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Doc_Date","ReadOnly",False)
+	Gui.F_KITE.GsGC5.SetColumnProperty("gvOutgoingFG","Amount","ReadOnly",False)
+
+	'Summary of FG
+	Gui.F_KITE.GsGC7.SetGridViewProperty("gvSummaryFG","AllowSort",True)
+	Gui.F_KITE.GsGC7.SetGridViewProperty("gvSummaryFG","AllowFilter",True)
+	
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Part","Caption","Part Number")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Desc","Caption","Part Description")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","UM","Caption","UM")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Beg_Bal","Caption","Beg. Balance")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","In","Caption","Incoming")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Out","Caption","Outgoing")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","End_Bal","Caption","End. Balance")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Warehouse","Caption","Warehouse")
+	
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Part","MinWidth","150")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Desc","MinWidth","400")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","UM","MinWidth","30")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Beg_Bal","MinWidth","120")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","In","MinWidth","120")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Out","MinWidth","120")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","End_Bal","MinWidth","120")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Warehouse","MinWidth","100")
+	
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Part","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Desc","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","UM","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Beg_Bal","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","In","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Out","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","End_Bal","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Warehouse","HeaderHAlignment","Center")
+	
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","UM","CELLHALIGNMENT","Center")
+	
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Beg_Bal","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","In","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","Out","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC7.SetColumnProperty("gvSummaryFG","End_Bal","DisplayCustomNumeric","###,###,###,##0.00")
+	
+	'Scrap
+	Gui.F_KITE.GsGC8.SetGridViewProperty("gvScrap","AllowSort",True)
+	Gui.F_KITE.GsGC8.SetGridViewProperty("gvScrap","AllowFilter",True)
+	Gui.F_KITE.GsGC8.SetGridViewProperty("gvScrap","OptionBehaviorEditable",True)
+	
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Doc_No","Caption","Doc. No.")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Issue_Date","Caption","Issue Date")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Code","Caption","Part Number")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Description","Caption","Part Description")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","UM","Caption","UM")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Quantity","Caption","Quantity")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Amount","Caption","Amount")
+	
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Doc_No","MinWidth","80")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Issue_Date","MinWidth","80")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Code","MinWidth","150")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Description","MinWidth","400")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","UM","MinWidth","30")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Quantity","MinWidth","120")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Amount","MinWidth","120")
+	
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Doc_No","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Issue_Date","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Code","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Item_Description","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","UM","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Quantity","HeaderHAlignment","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Amount","HeaderHAlignment","Center")
+	
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Issue_Date","CELLHALIGNMENT","Center")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","UM","CELLHALIGNMENT","Center")
+	
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Issue_Date","DisplayCustomDatetime","d")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Quantity","DisplayCustomNumeric","###,###,###,##0.00")
+	Gui.F_KITE.GsGC8.SetColumnProperty("gvScrap","Amount","DisplayCustomNumeric","###,###,###,##0.00")
+F.Intrinsic.Control.EndIf
+
+'Summary of RM
+Gui.F_KITE.GsGC6.SetGridViewProperty("gvSummaryRM","AllowSort",True)
+Gui.F_KITE.GsGC6.SetGridViewProperty("gvSummaryRM","AllowFilter",True)
+
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Part","Caption","Part Number")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Desc","Caption","Part Description")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","UM","Caption","UM")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Beg_Bal","Caption","Beg. Balance")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","In","Caption","Incoming")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Out","Caption","Outgoing")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","End_Bal","Caption","End. Balance")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Warehouse","Caption","Warehouse")
+
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Part","MinWidth","150")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Desc","MinWidth","400")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","UM","MinWidth","30")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Beg_Bal","MinWidth","120")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","In","MinWidth","120")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Out","MinWidth","120")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","End_Bal","MinWidth","120")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Warehouse","MinWidth","100")
+
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Part","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Desc","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","UM","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Beg_Bal","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","In","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Out","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","End_Bal","HeaderHAlignment","Center")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Warehouse","HeaderHAlignment","Center")
+
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","UM","CELLHALIGNMENT","Center")
+
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Beg_Bal","DisplayCustomNumeric","###,###,###,##0.00")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","In","DisplayCustomNumeric","###,###,###,##0.00")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","Out","DisplayCustomNumeric","###,###,###,##0.00")
+Gui.F_KITE.GsGC6.SetColumnProperty("gvSummaryRM","End_Bal","DisplayCustomNumeric","###,###,###,##0.00")
+Program.Sub.GridProperties.End
+
+Program.Sub.WIP_Issue.Start
+V.Local.bWrite.Declare
+
+V.Local.dDateHist.Declare(Date)
+
+V.Local.fQty.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sJob.Declare
+V.Local.sMessage.Declare
+V.Local.sPart.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+V.Local.sUM.Declare
+
+'Prepare datatable
+F.Data.DataTable.Create("dtIssueWIP",True)
+F.Data.DataTable.AddColumn("dtIssueWIP","Issue_No","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","Issue_Date","Date")
+F.Data.DataTable.AddColumn("dtIssueWIP","Item_Code","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","Item_Description","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","UM","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","Quantity","Float")
+F.Data.DataTable.AddColumn("dtIssueWIP","SubContract","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","SubContract_Receiver","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","Job","String")
+F.Data.DataTable.AddColumn("dtIssueWIP","Batch","String")
+'Job datatable to store affected work order by issued material transaction
+F.Data.DataTable.Create("dtJob",True)
+F.Data.DataTable.AddColumn("dtJob","Job","String")
+F.Data.DataTable.AddColumn("dtJob","Suffix","String")
+F.Data.DataTable.AddColumn("dtJob","Part","String")
+F.Data.DataTable.AddColumn("dtJob","Desc","String")
+F.Data.DataTable.AddColumn("dtJob","UM","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtIncomingRM.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("Issued to WIP: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtIncomingRM.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtIncomingRM.RowCount)
+	
+	F.Intrinsic.String.Build("select date_history, time_item_history, job, suffix, quantity from item_history where part = '{0}' and lot = '{1}' and heat = '{2}' and serial_number = '{3}' and code_transaction = 'J55' order by date_history desc, time_item_history desc",V.DataTable.dtIncomingRM(V.Local.i1).Item_Code!FieldValTrim,V.DataTable.dtIncomingRM(V.Local.i1).Lot!FieldValTrim,V.DataTable.dtIncomingRM(V.Local.i1).Heat!FieldValTrim,V.DataTable.dtIncomingRM(V.Local.i1).Serial!FieldValTrim,V.Local.sQuery)
+	F.Data.DataTable.CreateFromSQL("dtItem","Conx",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.DataTable.dtItem.RowCount,>,0)
+		F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtItem.RowCount--,1)
+			
+			'Format issue no. (J55YYMMDDHHNNSS)
+			F.Intrinsic.Date.ConvertDString(V.DataTable.dtItem(V.Local.i2).date_history!FieldValTrim,"YYMMDD",V.Local.dDateHist)
+			F.Intrinsic.String.Left(V.DataTable.dtItem(V.Local.i2).time_item_history!FieldValTrim,6,V.Local.sTime)
+			F.Intrinsic.String.Concat("J55",V.DataTable.dtItem(V.Local.i2).date_history!FieldValTrim,V.Local.sTime.Trim,V.Local.sIssueNo)
+			F.Intrinsic.Control.If(V.DataTable.dtIncomingRM(V.Local.i1).UM_Inv!FieldValTrim,=,"MT")
+				V.Local.sUM.Set("MM")
+				F.Intrinsic.Math.Mult(V.DataTable.dtItem(V.Local.i2).quantity!FieldValFloat,1000,V.Local.fQty)
+			F.Intrinsic.Control.Else
+				V.Local.sUM.Set(V.DataTable.dtIncomingRM(V.Local.i1).UM_Inv!FieldValTrim)
+				V.Local.fQty.Set(V.DataTable.dtItem(V.Local.i2).quantity!FieldValFloat)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Math.Mult(-1,V.Local.fQty,V.Local.fQty)
+			V.Local.bWrite.Set(True)
+			F.Intrinsic.Control.If(V.DataTable.dtJob.RowCount,>,0)
+				F.Intrinsic.String.Build("Job = '{0}' and Suffix = '{1}'",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sFilter)
+				F.Data.DataTable.Select("dtJob",V.Local.sFilter,V.Local.sRet)
+				'Job has been entered into datatables before  
+				F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+					F.Intrinsic.String.Build("select part, description from job_header where job = '{0}' and suffix = '{1}'",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sQuery)
+					F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+					'Check if WO exists
+					F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+						V.Local.sPart.Set(V.ODBC.Conx!rst.FieldValTrim!part)
+						V.Local.sDesc.Set(V.ODBC.Conx!rst.FieldValTrim!description)
+					F.Intrinsic.Control.Else
+						F.ODBC.Conx!rst.Close
+						F.Intrinsic.String.Build("select part, description from job_hist_mast where job = '{0}' and suffix = '{1}'",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sQuery)
+						F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+						F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+							V.Local.sPart.Set(V.ODBC.Conx!rst.FieldValTrim!part)
+							V.Local.sDesc.Set(V.ODBC.Conx!rst.FieldValTrim!description)
+						F.Intrinsic.Control.Else
+							V.Local.bWrite.Set(False)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+					F.ODBC.Conx!rst.Close
+					F.Intrinsic.Control.If(V.Local.bWrite,=,True)
+						F.Data.DataTable.AddRow("dtJob","Job",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,"Suffix",V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,"Part",V.Local.sPart.Trim,"Desc",V.Local.sDesc.Trim)
+						F.Global.Inventory.GetPartInfo(V.Local.sPart.Trim,"",V.Local.sRet)
+						F.Intrinsic.Control.If(V.Local.sRet,<>,"***NOPARTFOUND***")
+							F.Intrinsic.String.split(V.Local.sRet,"*!*",V.Local.sRet)
+							F.Data.DataTable.SetValue("dtJob",V.DataTable.dtJob.RowCount--,"UM",V.Local.sRet(2).Trim)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.If(V.Local.bWrite,=,True)
+					F.Intrinsic.Control.If(V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,=,"")
+						V.Local.sJob.Set(V.DataTable.dtItem(V.Local.i2).job!FieldValTrim)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("{0}-{1}",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sJob)
+					F.Intrinsic.Control.EndIf
+					F.Data.DataTable.AddRow("dtIssueWIP","Issue_No",V.Local.sIssueNo,"Issue_Date",V.Local.dDateHist,"Item_Code",V.DataTable.dtIncomingRM(V.Local.i1).Item_Code!FieldValTrim,"Item_Description",V.DataTable.dtIncomingRM(V.Local.i1).Item_Description!FieldValTrim,"UM",V.Local.sUM,"Quantity",V.Local.fQty,"Job",V.Local.sJob.Trim,"Batch",V.DataTable.dtIncomingRM(V.Local.i1).Batch!FieldValTrim)
+				F.Intrinsic.Control.EndIf
+			'Job has not been entered into datatables  
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("select part, description from job_header where job = '{0}' and suffix = '{1}'",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sQuery)
+				F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+				'Check if WO exists
+				F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+					V.Local.sPart.Set(V.ODBC.Conx!rst.FieldValTrim!part)
+					V.Local.sDesc.Set(V.ODBC.Conx!rst.FieldValTrim!description)
+				F.Intrinsic.Control.Else
+					F.ODBC.Conx!rst.Close
+					F.Intrinsic.String.Build("select part, description from job_hist_mast where job = '{0}' and suffix = '{1}'",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sQuery)
+					F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+					F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+						V.Local.sPart.Set(V.ODBC.Conx!rst.FieldValTrim!part)
+						V.Local.sDesc.Set(V.ODBC.Conx!rst.FieldValTrim!description)
+					F.Intrinsic.Control.Else
+						V.Local.bWrite.Set(False)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Conx!rst.Close
+				F.Intrinsic.Control.If(V.Local.bWrite,=,True)
+					F.Intrinsic.Control.If(V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,=,"")
+						V.Local.sJob.Set(V.DataTable.dtItem(V.Local.i2).job!FieldValTrim)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("{0}-{1}",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,V.Local.sJob)
+					F.Intrinsic.Control.EndIf
+					F.Data.DataTable.AddRow("dtIssueWIP","Issue_No",V.Local.sIssueNo,"Issue_Date",V.Local.dDateHist,"Item_Code",V.DataTable.dtIncomingRM(V.Local.i1).Item_Code!FieldValTrim,"Item_Description",V.DataTable.dtIncomingRM(V.Local.i1).Item_Description!FieldValTrim,"UM",V.Local.sUM,"Quantity",V.Local.fQty,"Job",V.Local.sJob.Trim,"Batch",V.DataTable.dtIncomingRM(V.Local.i1).Batch!FieldValTrim)
+					F.Data.DataTable.AddRow("dtJob","Job",V.DataTable.dtItem(V.Local.i2).job!FieldValTrim,"Suffix",V.DataTable.dtItem(V.Local.i2).suffix!FieldValTrim,"Part",V.Local.sPart.Trim,"Desc",V.Local.sDesc.Trim)
+					F.Global.Inventory.GetPartInfo(V.Local.sPart.Trim,"",V.Local.sRet)
+					F.Intrinsic.Control.If(V.Local.sRet,<>,"***NOPARTFOUND***")
+						F.Intrinsic.String.split(V.Local.sRet,"*!*",V.Local.sRet)
+						F.Data.DataTable.SetValue("dtJob",V.DataTable.dtJob.RowCount--,"UM",V.Local.sRet(2).Trim)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.i2)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("dtItem")
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.WIP_Issue.End
+
+Program.Sub.OutsidePO.Start
+V.Local.bExist.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.i3.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sJob.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+
+'Prepare datatable
+F.Data.DataTable.Create("dtOutsidePO",True)
+F.Data.DataTable.AddColumn("dtOutsidePO","Issue_No","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","Issue_Date","Date")
+F.Data.DataTable.AddColumn("dtOutsidePO","Item_Code","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","Item_Description","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","UM","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","Quantity","Float")
+F.Data.DataTable.AddColumn("dtOutsidePO","SubContract_Receiver","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","Job","String")
+F.Data.DataTable.AddColumn("dtOutsidePO","Seq","String")
+
+F.Data.DataTable.Create("dtIncomingFG",True)
+F.Data.DataTable.AddColumn("dtIncomingFG","Issue_No","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","Issue_Date","Date")
+F.Data.DataTable.AddColumn("dtIncomingFG","Item_Code","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","Item_Description","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","UM","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","WIP2FG","Float")
+F.Data.DataTable.AddColumn("dtIncomingFG","SubContract","Float")
+F.Data.DataTable.AddColumn("dtIncomingFG","Warehouse","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","Job","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","Seq","String")
+F.Data.DataTable.AddColumn("dtIncomingFG","Lot","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtJob.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("Outside PO and received PO: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtJob.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtJob.RowCount)
+	
+	'Get all outside sequence in a WO
+	F.Intrinsic.String.Build("select seq, router as part from job_operations where job = '{0}' and suffix = '{1}' and LMO = 'O' and seq < '990000'",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.Local.sQuery)
+	F.Data.DataTable.CreateFromSQL("dtJobO","Conx",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.DataTable.dtJobO.RowCount,>,0)
+		'If there is an outside sequence, check if a PO has been created
+		F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtJobO.RowCount--,1)
+			F.Intrinsic.String.Build("select p1.purchase_order as po, left(p1.record_no,3) as line, p1.um_purchasing as um, p1.qty_order as qty, p2.date_order as date_order, p2.vendor as vendor from v_po_lines p1 left join v_po_header p2 on p1.purchase_order = p2.purchase_order where p1.job = '{0}' and p1.suffix = '{1}' and p1.sequence = '{2}'",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.DataTable.dtJobO(V.Local.i2).seq!FieldValTrim,V.Local.sQuery)
+			F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+				F.Intrinsic.String.Format(V.ODBC.Conx!rst.FieldVal!date_order,"YYMM",V.Local.sDate)
+				F.Intrinsic.String.Concat(V.Local.sDate,V.ODBC.Conx!rst.FieldValTrim!po,V.ODBC.Conx!rst.FieldValTrim!line,V.Local.sIssueNo)
+				'Check if vendor long custom table exists
+				F.ODBC.Connection!Conx.TableExists("GAB_Vendor_Long",V.Local.bExist)
+				F.Intrinsic.Control.If(V.Local.bExist,=,True)
+					F.Intrinsic.String.Build("select vendorlong from GAB_Vendor_Long where vendor = '{0}'",V.ODBC.Conx!rst.FieldValTrim!vendor,V.Local.sQuery)
+					F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rstV",V.Local.sQuery)
+					'Get vendor name
+					F.Intrinsic.Control.If(V.ODBC.Conx!rstV.EOF,=,False)
+						V.Local.sName.Set(V.ODBC.Conx!rstV.FieldValTrim!vendorlong)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("vendor = '{0}'",V.ODBC.Conx!rst.FieldValTrim!vendor,V.Local.sFilter)
+						F.Data.DataTable.Select("dtVendor",V.Local.sFilter,V.Local.sRet)
+						V.Local.sName.Set(V.DataTable.dtVendor(V.Local.sRet).name!FieldValTrim)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.Conx!rstV.Close
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("vendor = '{0}'",V.ODBC.Conx!rst.FieldValTrim!vendor,V.Local.sFilter)
+					F.Data.DataTable.Select("dtVendor",V.Local.sFilter,V.Local.sRet)
+					V.Local.sName.Set(V.DataTable.dtVendor(V.Local.sRet).name!FieldValTrim)
+				F.Intrinsic.Control.EndIf
+				V.Local.sDesc.Set(V.DataTable.dtJob(V.Local.i1).Desc!FieldValTrim)
+				F.Intrinsic.Control.If(V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,=,"")
+					V.Local.sJob.Set(V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.string.Build("{0}-{1}",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.Local.sJob)
+				F.Intrinsic.Control.EndIf
+				F.Data.DataTable.AddRow("dtOutsidePO","Issue_No",V.Local.sIssueNo,"Issue_Date",V.ODBC.Conx!rst.FieldVal!date_order,"Item_Code",V.DataTable.dtJobO(V.Local.i2).part!FieldValTrim,"Item_Description",V.Local.sDesc.Trim,"UM",V.ODBC.Conx!rst.FieldValTrim!um,"Quantity",V.ODBC.Conx!rst.FieldValLong!qty,"SubContract_Receiver",V.Local.sName,"Job",V.Local.sJob.Trim,"Seq",V.DataTable.dtJobO(V.Local.i2).seq!FieldValTrim)
+				
+				'If outside PO has been received
+				F.Intrinsic.String.Build("select receiver_no as receiver, date_received, qty_received as qty from v_po_receiver where purchase_order = '{0}' and po_line = '{1}' and job = '{2}' and suffix = '{3}' and sequence = '{4}'",V.ODBC.Conx!rst.FieldValTrim!po,V.ODBC.Conx!rst.FieldValTrim!line,V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.DataTable.dtJobO(V.Local.i2).seq!FieldValTrim,V.Local.sQuery)
+				F.Data.DataTable.CreateFromSQL("dtReceiver","Conx",V.Local.sQuery)
+				F.Intrinsic.Control.If(V.DataTable.dtReceiver.RowCount,>,0)
+					F.Intrinsic.Control.For(V.Local.i3,0,V.DataTable.dtReceiver.RowCount--,1)
+						F.Intrinsic.String.Format(V.DataTable.dtReceiver(V.Local.i3).date_received!FieldVal,"YYMM",V.Local.sDate)
+						F.Intrinsic.String.Concat(V.Local.sDate.Trim,V.DataTable.dtReceiver(V.Local.i3).receiver!FieldValTrim,V.Local.sIssueNo)
+						F.Data.DataTable.AddRow("dtIncomingFG","Issue_No",V.Local.sIssueNo,"Issue_Date",V.DataTable.dtReceiver(V.Local.i3).date_received!FieldVal,"Item_Code",V.DataTable.dtJobO(V.Local.i2).part!FieldValTrim,"Item_Description",V.Local.sDesc.Trim,"UM",V.ODBC.Conx!rst.FieldValTrim!um,"WIP2FG",0,"SubContract",V.DataTable.dtReceiver(V.Local.i3).qty!FieldValLong,"Warehouse","QA","Job",V.Local.sJob.Trim,"Seq",V.DataTable.dtJobO(V.Local.i2).seq!FieldValTrim,"Lot","")
+					F.Intrinsic.Control.Next(V.Local.i3)
+				F.Intrinsic.Control.EndIf
+				F.Data.DataTable.Close("dtReceiver")
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Conx!rst.Close
+		F.Intrinsic.Control.Next(V.Local.i2)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("dtJobO")
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.OutsidePO.End
+
+Program.Sub.IncomingFG.Start
+V.Local.dDateHist.Declare(Date)
+
+V.Local.bExist.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sJob.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+
+'Datatable for FG summary
+F.Data.DataTable.Create("dtSummaryFG",True)
+F.Data.DataTable.AddColumn("dtSummaryFG","Part","String")
+F.Data.DataTable.AddColumn("dtSummaryFG","Desc","String")
+F.Data.DataTable.AddColumn("dtSummaryFG","UM","String")
+F.Data.DataTable.AddColumn("dtSummaryFG","Beg_Bal","Float")
+F.Data.DataTable.AddColumn("dtSummaryFG","In","Float")
+F.Data.DataTable.AddColumn("dtSummaryFG","Out","Float")
+F.Data.DataTable.AddColumn("dtSummaryFG","End_Bal","Float")
+F.Data.DataTable.AddColumn("dtSummaryFG","Warehouse","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtJob.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("WIP to Finished Goods: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtJob.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtJob.RowCount)
+	
+	'Retrieve WIP to FG from item_history
+	F.Intrinsic.String.Build("select date_history, time_item_history, quantity, lot from item_history where job = '{0}' and suffix = '{1}' and code_transaction = 'J52'",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.Local.sQuery)
+	F.Data.DataTable.CreateFromSQL("dtItem","Conx",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.DataTable.dtItem.RowCount,>,0)
+		'There is WIP to FG transaction
+		F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtItem.RowCount--,1)
+			'Format issue no. (J52YYMMDDHHNNSS)
+			F.Intrinsic.Date.ConvertDString(V.DataTable.dtItem(V.Local.i2).date_history!FieldValTrim,"YYMMDD",V.Local.dDateHist)
+			F.Intrinsic.String.Left(V.DataTable.dtItem(V.Local.i2).time_item_history!FieldValTrim,6,V.Local.sTime)
+			F.Intrinsic.String.Concat("J52",V.DataTable.dtItem(V.Local.i2).date_history!FieldValTrim,V.Local.sTime.Trim,V.Local.sIssueNo)
+			F.Intrinsic.Control.If(V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,=,"")
+				V.Local.sJob.Set(V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}-{1}",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.Local.sJob)
+			F.Intrinsic.Control.EndIf
+			F.Data.DataTable.AddRow("dtIncomingFG","Issue_No",V.Local.sIssueNo,"Issue_Date",V.Local.dDateHist,"Item_Code",V.DataTable.dtJob(V.Local.i1).Part!FieldValTrim,"Item_Description",V.DataTable.dtJob(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtJob(V.Local.i1).UM!FieldValTrim,"WIP2FG",V.DataTable.dtItem(V.Local.i2).quantity!FieldValLong,"SubContract",0,"Warehouse","QA","Job",V.Local.sJob.Trim,"Lot",V.DataTable.dtItem(V.Local.i2).lot!FieldValTrim)
+		F.Intrinsic.Control.Next(V.Local.i2)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("dtItem")
+	
+	'Collect all parts for FG summary
+	F.Intrinsic.Control.If(V.DataTable.dtSummaryFG.RowCount,>,0)
+		F.Intrinsic.String.Build("Part = '{0}'",V.DataTable.dtJob(V.Local.i1).Part!FieldValTrim,V.Local.sFilter)
+		F.Data.DataTable.Select("dtSummaryFG",V.Local.sFilter,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+			F.Data.DataTable.AddRow("dtSummaryFG","Part",V.DataTable.dtJob(V.Local.i1).Part!FieldValTrim,"Desc",V.DataTable.dtJob(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtJob(V.Local.i1).UM!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Data.DataTable.AddRow("dtSummaryFG","Part",V.DataTable.dtJob(V.Local.i1).Part!FieldValTrim,"Desc",V.DataTable.dtJob(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtJob(V.Local.i1).UM!FieldValTrim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.IncomingFG.End
+
+Program.Sub.OutgoingFG.Start
+V.Local.dDateHist.Declare(Date)
+
+V.Local.bExist.Declare
+
+V.Local.fAmt.Declare
+V.Local.fQty.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+V.Local.iYear.Declare
+
+V.Local.sCountry.Declare
+V.Local.sCurr.Declare
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sDocDate.Declare
+V.Local.sDocNo.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sJob.Declare
+V.Local.sLine.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+
+'Prepare datatable
+F.Data.DataTable.Create("dtOutgoingFG",True)
+F.Data.DataTable.AddColumn("dtOutgoingFG","Doc_No","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Doc_Date","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Issue_No","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Issue_Date","Date")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Customer","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Country","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Item_Code","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Item_Description","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","UM","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Quantity","Float")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Curr","String")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Amount","Float")
+F.Data.DataTable.AddColumn("dtOutgoingFG","Job","String")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtIncomingFG.RowCount--,1)
+	F.Intrinsic.Control.If(V.DataTable.dtIncomingFG(V.Local.i1).lot!FieldValTrim,<>,"")
+		F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+		F.Intrinsic.String.Build("Shipment data: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtIncomingFG.RowCount,V.Local.sMessage)
+		F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtIncomingFG.RowCount)
+		
+		F.Intrinsic.String.Build("select date_history, customer, quantity, order_no, order_suffix, order_line from v_item_history where part = '{0}' and lot = '{1}' and code_transaction = 'O35'",V.DataTable.dtIncomingFG(V.Local.i1).Item_Code!FieldValTrim,V.DataTable.dtIncomingFG(V.Local.i1).Lot!FieldValTrim,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtItem","conx",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.DataTable.dtItem.RowCount,>,0)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtItem.RowCount--,1)
+				F.Intrinsic.String.Concat(V.DataTable.dtItem(V.Local.i2).order_line!FieldValTrim,"0",V.Local.sLine)
+				'Set issue no. to YY#######$$$$%%% where # is 7 digit SO#, $ is 4 digit SO suffix, % is 3 digit SO line
+				F.Intrinsic.Date.Year(V.DataTable.dtItem(V.Local.i2).date_history!FieldVal,V.Local.iYear)
+				F.Intrinsic.String.ConvertToString(V.Local.iYear,V.Local.sIssueNo)
+				F.Intrinsic.String.Right(V.Local.sIssueNo,2,V.Local.sIssueNo)
+				F.Intrinsic.String.Concat(V.Local.sIssueNo.Trim,V.DataTable.dtItem(V.Local.i2).order_no!FieldValTrim,V.DataTable.dtItem(V.Local.i2).order_suffix!FieldValTrim,V.DataTable.dtItem(V.Local.i2).order_line!FieldValTrim,V.Local.sIssueNo)
+				
+				F.Intrinsic.String.Build("SELECT USER_FIELD_1,USER_FIELD_2 FROM ITEM_MASTER WHERE PART = '{0}' AND LOT = '{1}'",V.DataTable.dtIncomingFG(V.Local.i1).Item_Code!FieldValTrim,V.DataTable.dtIncomingFG(V.Local.i1).Lot!FieldValTrim,V.Local.sQuery)
+				'Get the custom document information stored in ITEM_MASTER user fields
+				F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+				V.Local.sDocNo.set(V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_1)
+				V.Local.sDocDate.Set(V.ODBC.Conx!rst.FieldValTrim!USER_FIELD_2)
+				F.ODBC.Conx!rst.Close
+				
+				'Get customer information (name, country and currency)
+				F.Intrinsic.string.Build("customer = '{0}'",V.DataTable.dtItem(V.Local.i2).customer!FieldValTrim,V.Local.sFilter)
+				F.Data.DataTable.Select("dtCust",V.Local.sFilter,V.Local.sRet)
+				V.Local.sName.Set(V.DataTable.dtCust(V.Local.sRet).name!FieldValTrim)
+				V.Local.sCountry.Set(V.DataTable.dtCust(V.Local.sRet).country!FieldValTrim)
+				V.Local.sCurr.Set(V.DataTable.dtCust(V.Local.sRet).currency!FieldValTrim)
+				F.Intrinsic.Control.If(V.DataTable.dtCustLong.Exists,=,True)
+					F.Data.DataTable.Select("dtCustLong",V.Local.sFilter,V.Local.sRet)
+					F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+						V.Local.sName.Set(V.DataTable.dtCustLong(V.Local.sRet).name!FieldValTrim)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				
+				'Get the order amount
+				F.Intrinsic.String.Build("select extension_order from shipment_lines where order_no = '{0}' and order_suffix = '{1}' and order_rec = '{2}'",V.DataTable.dtItem(V.Local.i2).order_no!FieldValTrim,V.DataTable.dtItem(V.Local.i2).order_suffix!FieldValTrim,V.Local.sLine.Trim,V.Local.sQuery)
+				F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+				F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+					V.Local.fAmt.Set(V.ODBC.Conx!rst.FieldValFloat!extension_order)
+				F.Intrinsic.Control.Else
+					F.ODBC.Conx!rst.Close
+					F.Intrinsic.String.Build("select extension_order from order_hist_line where order_no = '{0}' and order_suffix = '{1}' and order_line = '{2}' and part = '{3}'",V.DataTable.dtItem(V.Local.i2).order_no!FieldValTrim,V.DataTable.dtItem(V.Local.i2).order_suffix!FieldValTrim,V.Local.sLine.Trim,V.DataTable.dtIncomingFG(V.Local.i1).Item_Code!FieldValTrim,V.Local.sQuery)
+					F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+					F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+						V.Local.fAmt.Set(V.ODBC.Conx!rst.FieldValFloat!extension_order)
+					F.Intrinsic.Control.Else
+						V.Local.fAmt.Set(0)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Conx!rst.Close
+				F.Intrinsic.Math.Mult(-1,V.DataTable.dtItem(V.Local.i2).quantity!FieldValLong,V.Local.fQty)
+				F.Data.DataTable.AddRow("dtOutgoingFG","Doc_No",V.Local.sDocNo.Trim,"Doc_Date",V.Local.sDocDate.Trim,"Issue_No",V.Local.sIssueNo,"Issue_Date",V.DataTable.dtItem(V.Local.i2).date_history!FieldVal,"Customer",V.Local.sName.Trim,"Country",V.Local.sCountry.Trim,"Item_Code",V.DataTable.dtIncomingFG(V.Local.i1).Item_Code!FieldValTrim,"Item_Description",V.DataTable.dtIncomingFG(V.Local.i1).Item_Description!FieldValTrim,"UM",V.DataTable.dtIncomingFG(V.Local.i1).UM!FieldValTrim,"Quantity",V.Local.fQty,"Curr",V.Local.sCurr.Trim,"Amount",V.Local.fAmt,"Job",V.DataTable.dtIncomingFG(V.Local.i1).Job!FieldValTrim)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("dtItem")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.OutgoingFG.End
+
+Program.Sub.ExportExcel.Start
+V.Local.bPresence.Declare
+
+V.Local.fTemp.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.i3.Declare
+V.Local.iCol.Declare
+V.Local.iNo.Declare
+V.Local.iTCol.Declare
+V.Local.iRow.Declare
+V.Local.iSheet.Declare
+V.Local.iTRow.Declare
+
+V.Local.sFileName.Declare
+V.Local.sFilePath.Declare
+V.Local.sHeader.Declare
+V.Local.sRow.Declare
+V.Local.sSheet.Declare
+V.Local.sTemp.Declare
+V.Local.sValue.Declare
+
+F.Automation.MSExcel.CheckPresence(V.Local.bPresence)
+F.Intrinsic.Control.If(V.Local.bPresence,=,False)
+	F.Intrinsic.UI.Msgbox("Excel export is not possible because no excel program found in this computer","Indonesian KITE")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'Display the Save Dialog
+F.Intrinsic.UI.ShowSaveFileDialog("",".xlsx|",V.Local.sFilePath)
+F.Intrinsic.Control.If(V.Local.sFilePath,<>,"***CANCEL***")
+	F.Intrinsic.UI.InvokeWaitDialog("Preparing Export Data","Indonesian KITE")
+	F.Intrinsic.String.Concat(V.Local.sFilePath,".xlsx",V.Local.sFileName)
+	
+	'Sheet names
+	V.Local.sSheet.Set("RM Receipt&^&RM to WIP&^&Outside Process&^&Production Summary&^&Shipment&^&RM Stock Summary&^&FG Stock Summary&^&Scrap and Waste")
+	F.Automation.MSExcel.WriteSpreadsheet(V.Local.sFileName,V.Local.sSheet)
+	F.Intrinsic.String.Split(V.Local.sSheet,"&^&",V.Local.sSheet)
+	F.Automation.MSExcel.CreateAppObject("MSExcel")
+	F.Automation.MSExcel.OpenWorkbook("MSExcel","Export",V.Local.sFileName)
+	F.Intrinsic.Control.For(V.Local.i1,0,V.Local.sSheet.UBound,1)
+		F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iSheet)
+		F.Intrinsic.Control.If(V.Local.i1,>,0)
+			F.Automation.MSExcel.CreateAppObject("MSExcel")
+			F.Automation.MSExcel.OpenWorkbook("MSExcel","Export",V.Local.sFileName)
+		F.Intrinsic.Control.EndIf
+		F.Automation.MSExcel.OpenWorksheet("Export","Sheet",V.Local.iSheet)
+		F.Intrinsic.Control.If(V.Local.i1,=,0)
+			'Incoming RM
+			Gui.F_KITE.GsGC1.GetRowCount("gvIncomingRM",V.Local.iTRow)
+			F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+			'Setup header
+			F.Automation.MSExcel.WriteCell("Sheet",1,1,"RM Receipt")
+			F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+'			F.Automation.MSExcel.WriteCell("Sheet",3,2,"Dokumen Pabean")
+'			F.Automation.MSExcel.WriteCell("Sheet",3,6,"Bukti Penerimaan Barang")
+			F.Intrinsic.String.Split("No.*!*Doc. Type*!*Doc. No.*!*Doc. Date*!*Part Serial No.*!*Receiver No.*!*Receiver Date*!*Part Number*!*Part Description*!*UM*!*Quantity*!*Currency*!*Amount*!*Warehouse*!*Subcontract Recipient*!*Country of Origin*!*Lot*!*Heat*!*Serial*!*Batch","*!*",V.Local.sHeader)
+			F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+			F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+				F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+				F.Automation.MSExcel.WriteCell("Sheet",4,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+			F.Intrinsic.Control.Next(V.Local.i2)
+			'Write cell values
+			V.Local.iNo.Set(1)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+				F.Intrinsic.UI.ChangeWaitStatus("RM Receipt Data",V.Local.i2,0,V.Local.iTRow)
+				Gui.F_KITE.GsGC1.GetRowValues("gvIncomingRM",V.Local.i2,V.Local.sRow)
+				F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+				F.Intrinsic.Math.Add(V.Local.i2,5,V.Local.iRow)
+				F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i3,1,V.Local.iCol)
+					F.Intrinsic.Control.If(V.Local.i3,=,1)
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.Control.If(V.Local.i3,<,12)
+							F.Intrinsic.Math.Sub(V.Local.iCol,1,V.Local.iCol)
+'							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.If(V.Local.i3,=,7)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,11)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+						F.Intrinsic.Control.Else
+							'Skip inventory UM and quantity
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.i3).Trim)
+							F.Intrinsic.Control.If(V.Local.i3,=,13)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.i3),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.i3).Trim)
+							F.Intrinsic.Control.Endif
+						F.Intrinsic.Control.EndIf
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Next(V.Local.i3)
+				F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,1)
+			'Issue WIP
+			Gui.F_KITE.GsGC2.GetRowCount("gvIssueWIP",V.Local.iTRow)
+			F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+			'Setup header
+			F.Automation.MSExcel.WriteCell("Sheet",1,1,"RM to WIP")
+			F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+'			F.Automation.MSExcel.WriteCell("Sheet",3,2,"Bukti Pengeluaran")
+			F.Intrinsic.String.Split("No.*!*Issue No.*!*Issue Date*!*Part Number*!*Part Description*!*UM*!*Quantity*!*Subcontractor*!*Subcontract Recipient*!*Work Order*!*Batch","*!*",V.Local.sHeader)
+			F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+			F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+				F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+				F.Automation.MSExcel.WriteCell("Sheet",4,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+			F.Intrinsic.Control.Next(V.Local.i2)
+			'Write cell values
+			V.Local.iNo.Set(1)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+				F.Intrinsic.UI.ChangeWaitStatus("RM to WIP Data",V.Local.i2,0,V.Local.iTRow)
+				Gui.F_KITE.GsGC2.GetRowValues("gvIssueWIP",V.Local.i2,V.Local.sRow)
+				F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+				F.Intrinsic.Math.Add(V.Local.i2,5,V.Local.iRow)
+				F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+					F.Intrinsic.Control.If(V.Local.i3,=,1)
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+					F.Intrinsic.Control.Else
+'						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.iCol).Trim)
+						F.Intrinsic.Control.If(V.Local.i3,=,3)
+							F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+							V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'							F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+						F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+							F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+							F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'							F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+						F.Intrinsic.Control.Else
+							V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+						F.Intrinsic.Control.Endif
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Next(V.Local.i3)
+				F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,2)
+			F.Intrinsic.Control.If(V.DataTable.dtOutsidePO.Exists,=,True)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtOutsidePO.RowCount,>,0)
+				'Outside PO
+				Gui.F_KITE.GsGC3.GetRowCount("gvOutsidePO",V.Local.iTRow)
+				F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+				'Setup header
+				F.Automation.MSExcel.WriteCell("Sheet",1,1,"Outside Process")
+				F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+'				F.Automation.MSExcel.WriteCell("Sheet",3,2,"Bukti Pengeluaran")
+				F.Intrinsic.String.Split("No.*!*Issue No.*!*Issue Date*!*Part Number*!*Part Description*!*UM*!*Quantity*!*Subcontract Recipient*!*Work Order*!*Sequence","*!*",V.Local.sHeader)
+				F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+				F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+					F.Automation.MSExcel.WriteCell("Sheet",4,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+				F.Intrinsic.Control.Next(V.Local.i2)
+				'Write cell values
+				V.Local.iNo.Set(1)
+				F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+					F.Intrinsic.UI.ChangeWaitStatus("Outside Process Data",V.Local.i2,0,V.Local.iTRow)
+					Gui.F_KITE.GsGC3.GetRowValues("gvOutsidePO",V.Local.i2,V.Local.sRow)
+					F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+					F.Intrinsic.Math.Add(V.Local.i2,5,V.Local.iRow)
+					F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+						F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+						F.Intrinsic.Control.If(V.Local.i3,=,1)
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+						F.Intrinsic.Control.Else
+'							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.If(V.Local.i3,=,3)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.i3)
+					F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+				F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,3)
+			'Incoming FG
+			F.Intrinsic.Control.If(V.DataTable.dtIncomingFG.Exists,=,True)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtIncomingFG.RowCount,>,0)
+				Gui.F_KITE.GsGC4.GetRowCount("gvIncomingFG",V.Local.iTRow)
+				F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+				'Setup header
+				F.Automation.MSExcel.WriteCell("Sheet",1,1,"Production Summary")
+				F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+'				F.Automation.MSExcel.WriteCell("Sheet",3,2,"Bukti Pengeluaran")
+				F.Intrinsic.String.Split("No.*!*Issue No.*!*Issue Date*!*Part Number*!*Part Description*!*UM*!*Quantity (WIP to FG)*!*Quantity (Outside PO)*!*Warehouse*!*Work Order*!*Sequence*!*Lot","*!*",V.Local.sHeader)
+				F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+				F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+					F.Automation.MSExcel.WriteCell("Sheet",4,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+				F.Intrinsic.Control.Next(V.Local.i2)
+				'Write cell values
+				V.Local.iNo.Set(1)
+				F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+					F.Intrinsic.UI.ChangeWaitStatus("Production Summary Data",V.Local.i2,0,V.Local.iTRow)
+					Gui.F_KITE.GsGC4.GetRowValues("gvIncomingFG",V.Local.i2,V.Local.sRow)
+					F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+					F.Intrinsic.Math.Add(V.Local.i2,5,V.Local.iRow)
+					F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+						F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+						F.Intrinsic.Control.If(V.Local.i3,=,1)
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+						F.Intrinsic.Control.Else
+'							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.If(V.Local.i3,=,3)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,8)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.i3)
+					F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+				F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,4)
+			'Outgoing FG
+			F.Intrinsic.Control.If(V.DataTable.dtOutgoingFG.Exists,=,True)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtOutgoingFG.RowCount,>,0)
+				Gui.F_KITE.GsGC5.GetRowCount("gvOutgoingFG",V.Local.iTRow)
+				F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+				'Setup header
+				F.Automation.MSExcel.WriteCell("Sheet",1,1,"Shipping")
+				F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+'				F.Automation.MSExcel.WriteCell("Sheet",3,2,"Dokumen PEB")
+'				F.Automation.MSExcel.WriteCell("Sheet",3,4,"Bukti Pengeluaran Barang")
+				F.Intrinsic.String.Split("No*!*Doc. No.*!*Doc. Date*!*Issue No.*!*Issue Date*!*Customer*!*Country*!*Part Number*!*Part Description*!*UM*!*Quantity*!*Currency*!*Amount*!*Work Order","*!*",V.Local.sHeader)
+				F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+				F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+					F.Automation.MSExcel.WriteCell("Sheet",4,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+				F.Intrinsic.Control.Next(V.Local.i2)
+				'Write cell values
+				V.Local.iNo.Set(1)
+				F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+					F.Intrinsic.UI.ChangeWaitStatus("Shipping Data",V.Local.i2,0,V.Local.iTRow)
+					Gui.F_KITE.GsGC5.GetRowValues("gvOutgoingFG",V.Local.i2,V.Local.sRow)
+					F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+					F.Intrinsic.Math.Add(V.Local.i2,5,V.Local.iRow)
+					F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+						F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+						F.Intrinsic.Control.If(V.Local.i3,=,1)
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+						F.Intrinsic.Control.Else
+'							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.If(V.Local.i3,=,3)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,5)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"DD-MMM-YY")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,11)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,13)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+'								F.Automation.MSExcel.FormatCell("Sheet",V.Local.iRow,V.Local.i3,"###,###,###,##0.00")
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.i3)
+					F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+				F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,5)
+			'Summary RM
+			Gui.F_KITE.GsGC6.GetRowCount("gvSummaryRM",V.Local.iTRow)
+			F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+			'Setup header
+			F.Automation.MSExcel.WriteCell("Sheet",1,1,"RM Stock Summary")
+			F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+			F.Intrinsic.String.Split("No.*!*Part Number*!*Part Description*!*UM*!*Beg. Balance*!*Incoming*!*Outgoing*!*End. Balance*!*Warehouse","*!*",V.Local.sHeader)
+			F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+			F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+				F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+				F.Automation.MSExcel.WriteCell("Sheet",3,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+			F.Intrinsic.Control.Next(V.Local.i2)
+			'Write cell values
+			V.Local.iNo.Set(1)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+				F.Intrinsic.UI.ChangeWaitStatus("RM Stock Summary",V.Local.i2,0,V.Local.iTRow)
+				Gui.F_KITE.GsGC6.GetRowValues("gvSummaryRM",V.Local.i2,V.Local.sRow)
+				F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+				F.Intrinsic.Math.Add(V.Local.i2,4,V.Local.iRow)
+				F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+					F.Intrinsic.Control.If(V.Local.i3,=,1)
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.Control.If(V.Local.i3,=,5)
+							F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+							F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+						F.Intrinsic.Control.ElseIf(V.Local.i3,=,6)
+							F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+							F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+						F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+							F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+							F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+						F.Intrinsic.Control.ElseIf(V.Local.i3,=,8)
+							F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+							F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+						F.Intrinsic.Control.Else
+							V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+						F.Intrinsic.Control.Endif
+						F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Next(V.Local.i3)
+				F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,6)
+			'Summary FG
+			F.Intrinsic.Control.If(V.DataTable.dtSummaryFG.Exists,=,True)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtSummaryFG.RowCount,>,0)
+				Gui.F_KITE.GsGC7.GetRowCount("gvSummaryFG",V.Local.iTRow)
+				F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+				'Setup header
+				F.Automation.MSExcel.WriteCell("Sheet",1,1,"FG Stock Summary")
+				F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+				F.Intrinsic.String.Split("No.*!*Part Number*!*Part Description*!*UM*!*Beg. Balance*!*Incoming*!*Outgoing*!*End. Balance*!*Warehouse","*!*",V.Local.sHeader)
+				F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+				F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+					F.Automation.MSExcel.WriteCell("Sheet",3,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+				F.Intrinsic.Control.Next(V.Local.i2)
+				'Write cell values
+				V.Local.iNo.Set(1)
+				F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+					F.Intrinsic.UI.ChangeWaitStatus("FG Stock Summary",V.Local.i2,0,V.Local.iTRow)
+					Gui.F_KITE.GsGC7.GetRowValues("gvSummaryFG",V.Local.i2,V.Local.sRow)
+					F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+					F.Intrinsic.Math.Add(V.Local.i2,4,V.Local.iRow)
+					F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+						F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+						F.Intrinsic.Control.If(V.Local.i3,=,1)
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.Control.If(V.Local.i3,=,5)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,6)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,8)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.i3)
+					F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+				F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.Local.i1,=,7)
+			'Scrap
+			F.Intrinsic.Control.If(V.DataTable.dtScrap.Exists,=,True)
+			F.Intrinsic.Control.AndIf(V.DataTable.dtScrap.RowCount,>,0)
+				Gui.F_KITE.GsGC8.GetRowCount("gvScrap",V.Local.iTRow)
+				F.Intrinsic.Math.Sub(V.Local.iTRow,1,V.Local.iTRow)
+				'Setup header
+				F.Automation.MSExcel.WriteCell("Sheet",1,1,"Waste/ Scrap")
+				F.Automation.MSExcel.WriteCell("Sheet",2,1,V.Screen.F_KITE!lblPeriod.Caption)
+				F.Intrinsic.String.Split("No.*!*Doc. No.*!*Issue Date*!*Part Number*!*Part Description*!*UM*!*Quantity*!*Amount","*!*",V.Local.sHeader)
+				F.Intrinsic.Math.Add(V.Local.sHeader.UBound,1,V.Local.iTCol)
+				F.Intrinsic.Control.For(V.Local.i2,1,V.Local.iTCol,1)
+					F.Intrinsic.Math.Sub(V.Local.i2,1,V.Local.iCol)
+					F.Automation.MSExcel.WriteCell("Sheet",3,V.Local.i2,V.Local.sHeader(V.Local.iCol).Trim)
+				F.Intrinsic.Control.Next(V.Local.i2)
+				'Write cell values
+				V.Local.iNo.Set(1)
+				F.Intrinsic.Control.For(V.Local.i2,0,V.Local.iTRow,1)
+					F.Intrinsic.UI.ChangeWaitStatus("Waste/ Scrap",V.Local.i2,0,V.Local.iTRow)
+					Gui.F_KITE.GsGC8.GetRowValues("gvScrap",V.Local.i2,V.Local.sRow)
+					F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+					F.Intrinsic.Math.Add(V.Local.i2,4,V.Local.iRow)
+					F.Intrinsic.Control.For(V.Local.i3,1,V.Local.iTCol,1)
+						F.Intrinsic.Math.Sub(V.Local.i3,2,V.Local.iCol)
+						F.Intrinsic.Control.If(V.Local.i3,=,1)
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.iNo)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.Control.If(V.Local.i3,=,3)
+								F.Intrinsic.String.Split(V.Local.sRow(V.Local.iCol).Trim," ",V.Local.sTemp)
+								V.Local.sValue.Set(V.Local.sTemp(0).Trim)
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,7)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.ElseIf(V.Local.i3,=,8)
+								F.Intrinsic.Math.ConvertToFloat(V.Local.sRow(V.Local.iCol),V.Local.fTemp)
+								F.Intrinsic.String.Format(V.Local.fTemp,"#,0.00",V.Local.sValue)
+							F.Intrinsic.Control.Else
+								V.Local.sValue.Set(V.Local.sRow(V.Local.iCol).Trim)
+							F.Intrinsic.Control.Endif
+							F.Automation.MSExcel.WriteCell("Sheet",V.Local.iRow,V.Local.i3,V.Local.sValue)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.i3)
+					F.Intrinsic.Math.Add(V.Local.iNo,1,V.Local.iNo)
+				F.Intrinsic.Control.Next(V.Local.i2)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.MSExcel.NameWorksheet("Sheet",V.Local.sSheet(V.Local.i1))
+		F.Automation.MSExcel.SaveWorkbook("Export")
+		F.Automation.MSExcel.DestroyAllObjects("MSExcel","Export","Sheet")
+	F.Intrinsic.Control.Next(V.Local.i1)
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.String.Build("Excel file has been exported to {0}",V.Local.sFileName,V.Local.sTemp)
+	F.Intrinsic.UI.Msgbox(V.Local.sTemp,"Indonesian KITE")
+F.Intrinsic.Control.EndIf
+Program.Sub.ExportExcel.End
+
+Program.Sub.SummaryRM.Start
+V.Local.bExist.Declare
+
+V.Local.dStartDate.Declare(Date)
+
+V.Local.fBegBal.Declare
+V.Local.fEndBal.Declare
+V.Local.fInbound.Declare
+V.Local.fOutbound.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+V.Local.sWarehouse.Declare
+
+V.Local.dStartDate.Set(V.Screen.F_KITESelect!dtp1.Value)
+
+'Summary of raw material inventory changes for every part number
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtSummaryRM.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("Summary of Raw Material: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtSummaryRM.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtSummaryRM.RowCount)
+	
+	'Get inventory beginning balance up to the selected start date
+	F.Intrinsic.String.Build("select sum(quantity) from v_inventory_hist where part = '{0}' and date_history < '{1}'",V.DataTable.dtSummaryRM(V.Local.i1).Part!FieldValTrim,V.Local.dStartDate.PervasiveDate,V.Local.sQuery)
+	F.ODBC.Connection!Conx.ExecuteAndReturn(V.Local.sQuery,V.Local.fBegBal)
+	F.Intrinsic.Math.Add(V.Local.fBegBal,0,V.Local.fBegBal)
+	
+	'Get total inbound from dtIncomingRM
+	F.Intrinsic.String.Build("Item_Code = '{0}'",V.DataTable.dtSummaryRM(V.Local.i1).Part!FieldValTrim,V.Local.sFilter)
+	F.Data.DataTable.Compute("dtIncomingRM","SUM(Quantity_Inv)",V.Local.sFilter,V.Local.fInbound)
+	
+	'Get total outbound from dtIssueWIP
+	F.Data.DataTable.Select("dtIssueWIP",V.Local.sFilter,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+		V.Local.fOutbound.Set(0)
+	F.Intrinsic.Control.Else
+		F.Data.DataTable.Compute("dtIssueWIP","SUM(Quantity)",V.Local.sFilter,V.Local.fOutbound)
+		'If inventory UM is MT, divide the quantity by 1,000 because UM in dtIssueWIP is MM
+		F.Intrinsic.Control.If(V.DataTable.dtSummaryRM(V.Local.i1).UM!FieldValTrim,=,"MT")
+			F.Intrinsic.Math.Div(V.Local.fOutbound,1000,V.Local.fOutbound)
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.EndIf
+	
+	'Get total outbound
+	F.Intrinsic.Math.Add(V.Local.fBegBal,V.Local.fInbound,V.Local.fEndBal)
+	F.Intrinsic.Math.Sub(V.Local.fEndBal,V.Local.fOutbound,V.Local.fEndBal)
+	
+	F.Intrinsic.Control.If(V.Local.fOutbound,>,0)
+		V.Local.sWarehouse.Set("GBAK,RPROD")
+	F.Intrinsic.Control.Else
+		V.Local.sWarehouse.Set("GBAK")
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.SetValue("dtSummaryRM",V.Local.i1,"Beg_Bal",V.Local.fBegBal,"In",V.Local.fInbound,"Out",V.Local.fOutbound,"End_Bal",V.Local.fEndBal,"Warehouse",V.Local.sWarehouse)
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.SummaryRM.End
+
+Program.Sub.SummaryFG.Start
+V.Local.bExist.Declare
+
+V.Local.dStartDate.Declare(Date)
+
+V.Local.fBegBal.Declare
+V.Local.fEndBal.Declare
+V.Local.fInbound.Declare
+V.Local.fOutbound.Declare
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+V.Local.sWarehouse.Declare
+
+V.Local.dStartDate.Set(V.Screen.F_KITESelect!dtp1.Value)
+
+'Summary of finished goods inventory changes for every part number
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtSummaryFG.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+	F.Intrinsic.String.Build("Summary of Finished Goods: reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtSummaryFG.RowCount,V.Local.sMessage)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtSummaryFG.RowCount)
+	
+	'Get inventory beginning balance up to the selected start date
+	F.Intrinsic.String.Build("select sum(quantity) from v_inventory_hist where part = '{0}' and date_history < '{1}'",V.DataTable.dtSummaryFG(V.Local.i1).Part!FieldValTrim,V.Local.dStartDate.PervasiveDate,V.Local.sQuery)
+	F.ODBC.Connection!Conx.ExecuteAndReturn(V.Local.sQuery,V.Local.fBegBal)
+	F.Intrinsic.Math.Add(V.Local.fBegBal,0,V.Local.fBegBal)
+	
+	'Get total inbound from dtIncomingFG
+	F.Intrinsic.String.Build("Item_Code = '{0}'",V.DataTable.dtSummaryFG(V.Local.i1).Part!FieldValTrim,V.Local.sFilter)
+	F.Data.DataTable.Compute("dtIncomingFG","SUM(WIP2FG)",V.Local.sFilter,V.Local.fInbound)
+	
+	'Get total outbound from dtOutgoingFG
+	F.Data.DataTable.Compute("dtOutgoingFG","SUM(Quantity)",V.Local.sFilter,V.Local.fOutbound)
+	
+	'Get total outbound
+	F.Intrinsic.Math.Add(V.Local.fBegBal,V.Local.fInbound,V.Local.fEndBal)
+	F.Intrinsic.Math.Sub(V.Local.fEndBal,V.Local.fOutbound,V.Local.fEndBal)
+	
+	F.Data.DataTable.SetValue("dtSummaryFG",V.Local.i1,"Beg_Bal",V.Local.fBegBal,"In",V.Local.fInbound,"Out",V.Local.fOutbound,"End_Bal",V.Local.fEndBal,"Warehouse","QA")
+F.Intrinsic.Control.Next(V.Local.i1)
+Program.Sub.SummaryFG.End
+
+Program.Sub.Quality.Start
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iCRow.Declare
+
+V.Local.sDate.Declare
+V.Local.sDesc.Declare
+V.Local.sFilter.Declare
+V.Local.sIssueNo.Declare
+V.Local.sJob.Declare
+V.Local.sMessage.Declare
+V.Local.sName.Declare
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.sTime.Declare
+
+'Datatable for quality numbers related to the listed jobs
+F.Data.DataTable.Create("dtNCMR",True)
+F.Data.DataTable.AddColumn("dtNCMR","NCMR","String")
+F.Data.DataTable.AddColumn("dtNCMR","Part","String")
+F.Data.DataTable.AddColumn("dtNCMR","Desc","String")
+F.Data.DataTable.AddColumn("dtNCMR","UM","String")
+'Scrap datatable
+F.Data.DataTable.Create("dtScrap",True)
+F.Data.DataTable.AddColumn("dtScrap","Doc_No","String")
+F.Data.DataTable.AddColumn("dtScrap","Issue_Date","Date")
+F.Data.DataTable.AddColumn("dtScrap","Item_Code","String")
+F.Data.DataTable.AddColumn("dtScrap","Item_Description","String")
+F.Data.DataTable.AddColumn("dtScrap","UM","String")
+F.Data.DataTable.AddColumn("dtScrap","Quantity","Long")
+F.Data.DataTable.AddColumn("dtScrap","Amount","Float")
+
+F.Intrinsic.UI.ChangeWaitStatus("Retrieving all related NCMR numbers")
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtJob.RowCount--,1)
+	'Get all related NCMR
+	F.Intrinsic.String.Build("select control_number as ncmr from quality where job = '{0}' and suffix = '{1}'",V.DataTable.dtJob(V.Local.i1).Job!FieldValTrim,V.DataTable.dtJob(V.Local.i1).Suffix!FieldValTrim,V.Local.sQuery)
+	F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rst.EOF,=,False)
+		F.Intrinsic.Control.DoUntil(V.ODBC.Conx!rst.EOF,=,True)
+			F.Data.DataTable.AddRow("dtNCMR","NCMR",V.ODBC.Conx!rst.FieldValTrim!ncmr,"Part",V.DataTable.dtJob(V.Local.i1).Part!FieldValTrim,"Desc",V.DataTable.dtJob(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtJob(V.Local.i1).UM!FieldValTrim)
+			F.ODBC.Conx!rst.MoveNext
+		F.Intrinsic.Control.Loop
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rst.Close
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Go through every NCMR number
+F.Intrinsic.Control.If(V.DataTable.dtNCMR.RowCount,>,0)
+	F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtNCMR.RowCount--,1)
+		F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iCRow)
+		F.Intrinsic.String.Build("Quality data (Scrap and Rework): reading record {0} of {1}",V.Local.iCRow,V.DataTable.dtNCMR.RowCount,V.Local.sMessage)
+		F.Intrinsic.UI.ChangeWaitStatus(V.Local.sMessage,V.Local.iCRow,1,V.DataTable.dtNCMR.RowCount)
+		
+		'NCMR that has been disposed as scrap
+		F.Intrinsic.String.Build("select qty_disposed as qty, disposed_value as amount, date_disposed from v_quality_disp where control_number = '{0}' and disposition_action = 'Scrap'",V.DataTable.dtNCMR(V.Local.i1).NCMR!FieldValTrim,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtDisp","Conx",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.DataTable.dtDisp.RowCount,>,0)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtDisp.RowCount--,1)
+				F.Data.DataTable.AddRow("dtScrap","Doc_No","BC 2.4","Issue_Date",V.DataTable.dtDisp(V.Local.i2).date_disposed!FieldVal,"Item_Code",V.DataTable.dtNCMR(V.Local.i1).Part!FieldValTrim,"Item_Description",V.DataTable.dtNCMR(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtNCMR(V.Local.i1).UM!FieldValTrim,"Quantity",V.DataTable.dtDisp(V.Local.i2).qty!FieldValLong,"Amount",V.DataTable.dtDisp(V.Local.i2).amount!FieldValFloat)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("dtDisp")
+		
+		'NCMR that has been disposed as rework on new WO
+		F.Intrinsic.String.Build("select new_job, new_suffix from v_quality_disp where control_number = '{0}' and disposition_action = 'Rework on New WO'",V.DataTable.dtNCMR(V.Local.i1).NCMR!FieldValTrim,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtDisp","Conx",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.DataTable.dtDisp.RowCount,>,0)
+			F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtDisp.RowCount--,1)
+				F.Data.DataTable.AddRow("dtJob","Job",V.DataTable.dtDisp(V.Local.i2).new_job!FieldValTrim,"Suffix",V.DataTable.dtDisp(V.Local.i2).new_suffix!FieldValTrim,"Part",V.DataTable.dtNCMR(V.Local.i1).Part!FieldValTrim,"Desc",V.DataTable.dtNCMR(V.Local.i1).Desc!FieldValTrim,"UM",V.DataTable.dtNCMR(V.Local.i1).UM!FieldValTrim)
+			F.Intrinsic.Control.Next(V.Local.i2)
+		F.Intrinsic.Control.EndIf
+		F.Data.DataTable.Close("dtDisp")
+	F.Intrinsic.Control.Next(V.Local.i1)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Close("dtNCMR")
+Program.Sub.Quality.End
+
+Program.Sub.Comments.Start
+${$0$}$Indonesia KITE (English Version)$}$MHERTANTO$}$20/6/2017 11:37:56 PM$}$True
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$KITE (Kemudahan Impor Terhadap Ekspor)
+
+This program tracks raw materials in the shop floor from issue, going through outside process, coming back from outside process, WIP to FG, shipment and going through quality. The report is divided into 8 parts: RM Receipts, RM to WIP, Outside Process, Production Summary, Shipment, RM Stock Summary, FG Stock Summary, Scrap and Waste.
+
+This program is designed according to Indonesian Customs requirements for companies which receive import tax exemption for exporting FG using the imported raw materials.
+
+Requirements:
+1. Part has to be designated as 'KITE' in inventory user field 2
+2. Part must have lot/bin
+3. RM receipts only recognize P10, P11 and A10
+
+Program.Sub.Comments.End
